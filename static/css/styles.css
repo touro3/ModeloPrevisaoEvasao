@@ -1,0 +1,15 @@
+.green {
+    background-color: #00f83a !important;
+}
+
+.yellow {
+    background-color: #fed960 !important;
+}
+
+.red {
+    background-color: #f70015 !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, .05);
+}

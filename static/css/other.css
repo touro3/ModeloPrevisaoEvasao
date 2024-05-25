@@ -1,0 +1,35 @@
+.container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: animate__animated animate__zoomIn; /* Animação ao carregar a página */
+}
+
+input[type="text"]:hover, input[type="text"]:focus {
+  color: #343a40;  /* Cor do texto */
+  background-color: #e6e6e6;  /* Cor de fundo mais clara para destaque */
+  opacity: 1;  /* Garante que o campo não se torne transparente */
+}
+
+button:hover {
+  background-color: #45a049;  /* Cor mais escura para o botão no hover */
+  opacity: 1;  /* Garante que o botão não se torne transparente */
+}
+
+button.btn {
+  background-color: #4CAF50; /* Cor verde padrão */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.5s; /* Transição suave para o hover */
+}
+
+button.btn:hover {
+  background-color: #45a049; /* Cor mais escura no hover */
+}
