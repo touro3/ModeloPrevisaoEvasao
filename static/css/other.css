@@ -57,3 +57,29 @@ input[type="text"]:focus {
   text-align: center;
   padding: 10px 0;
 }
+
+#calendar {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fc-daygrid-day-number {  /* Estilo para o número do dia no calendário */
+  font-size: 16px;
+  color: #333;
+}
+
+.fc-event {  /* Estilo para os eventos no calendário */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.fc-event:hover {
+  background-color: #45a049;
+}

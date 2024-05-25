@@ -1,5 +1,19 @@
 var alunos = [];
 
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: ['dayGrid'],
+      initialView: 'dayGridMonth',
+      events: [  // Lista de eventos (dias de monitoria)
+          { title: 'Monitoria de Matemática - Ana', date: '2024-06-03' },
+          { title: 'Monitoria de Física - Pedro', date: '2024-06-10' },
+          { title: 'Monitoria de Química - Lúcia', date: '2024-06-17' }
+      ]
+  });
+  calendar.render();
+});
+
 document.getElementById('adicionar-aluno').addEventListener('click', function() {
   var nomeAluno = document.getElementById('nome-aluno').value;
   var desempenhoAluno = document.getElementById('desempenho-aluno').value;

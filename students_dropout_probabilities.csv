@@ -1,4 +1,10 @@
 name,probability
 John Doe,0.85
 Jane Smith,0.45
-Emily Johnson,0.20
+Emily Johnso,0.20
+Emily Johns,0.3
+Emily John,0.4
+Emily Joh,0.5
+Emily Jo,1.0
+Emily J,0.84
+Emily,0.2

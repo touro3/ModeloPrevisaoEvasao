@@ -19,15 +19,15 @@ body {
 }
 
 .green {
-    background-image: linear-gradient(to right, #70ea8d 0%, #2cdc55 50%, #0ada3e 100%);
+    background-image: linear-gradient(to right, #adffc0 0%, #59ff80 50%, #00ff40 100%);
 }
 
 .yellow {
-    background-image: linear-gradient(to right, #fff3cd 0%, #ffeeba 50%, #ffeb9c 100%);
+    background-image: linear-gradient(to right, #fee285 0%, #facc40 50%, #ffcc00 100%);
 }
 
 .red {
-    background-image: linear-gradient(to right, #f8d7da 0%, #f5c6cb 50%, #f4b2bd 100%);
+    background-image: linear-gradient(to right, #ff959e 0%, #ff4557 50%, #fb002a 100%);
 }
 
 .sidebar {
