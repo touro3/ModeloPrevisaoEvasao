@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela do Professor</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/other.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"/>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/IanLunn/Hover/master/css/hover-min.css"/>
-  </head>
-  
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">IDP</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/other">Página do Professor</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/calendar">Calendário de Mentorias</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+</head>
 <body>
-  <div class="container">
-    <h1 class="animate__animated animate__fadeInLeft">Adicionar Aluno:</h1>
-    <form action="/adicionar-aluno" method="post">
-      <input type="text" id="nome-aluno" name="nome" placeholder="Nome do Aluno" required class="hvr-bounce-to-right">
-      <input type="text" id="desempenho-aluno" name="desempenho" placeholder="Feedback do aluno" required class="hvr-bounce-to-right">
-      <button type="submit" class="btn hvr-radial-out">Adicionar Aluno</button>
-    </form>
-  </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">IDP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/other">Página do Professor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/calendar">Calendário de Mentorias</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
 
-  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-      <!-- Footer -->
-      <footer class="bg-dark text-white text-center py-3 footer">
+    <div class="container">
+        <h1>Adicionar Aluno:</h1>
+        <form action="/adicionar-aluno" method="post">
+            <input type="text" id="nome-aluno" name="nome" placeholder="Nome do Aluno" required>
+            <input type="text" id="desempenho-aluno" name="desempenho" placeholder="Feedback do aluno" required>
+            <button type="submit" class="btn btn-primary">Adicionar Aluno</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 footer">
         <p>© 2024/1 Hackathon. All rights reserved.</p>
         <a href="#" class="text-white"><i class="fab fa-facebook-f mr-3"></i></a>
         <a href="#" class="text-white"><i class="fab fa-twitter mr-3"></i></a>
         <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
     </footer>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-    <script>
-      AOS.init();
-  </script>
 </body>
 </html>

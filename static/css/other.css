@@ -1,3 +1,10 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 .container {
   width: 80%;
   margin: 50px auto;
@@ -5,31 +12,48 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: animate__animated animate__zoomIn; /* Animação ao carregar a página */
 }
 
-input[type="text"]:hover, input[type="text"]:focus {
-  color: #343a40;  /* Cor do texto */
-  background-color: #e6e6e6;  /* Cor de fundo mais clara para destaque */
-  opacity: 1;  /* Garante que o campo não se torne transparente */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"], button {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 button:hover {
-  background-color: #45a049;  /* Cor mais escura para o botão no hover */
-  opacity: 1;  /* Garante que o botão não se torne transparente */
+  background-color: #45a049;
 }
 
-button.btn {
-  background-color: #4CAF50; /* Cor verde padrão */
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin-top: 20px;
+  background-color: #222;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.5s; /* Transição suave para o hover */
-}
-
-button.btn:hover {
-  background-color: #45a049; /* Cor mais escura no hover */
+  text-align: center;
+  padding: 10px 0;
 }

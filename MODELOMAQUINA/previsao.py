@@ -113,6 +113,21 @@ alunos_evadidos = nomes_alunos[y_test[y_test != y_pred].index]
 # Adicionar a coluna 'Nome' novamente ao DataFrame
 df_evadidos = pd.DataFrame({'Nome': alunos_evadidos})
 
+# Assumindo que 'modelo' é seu DecisionTreeClassifier treinado
+probabilidades = modelo.predict_proba(X_test)[:, 1]  # Pega a probabilidade da classe positiva
+
+# Cria um DataFrame dos alunos testados com suas probabilidades
+df_testados = pd.DataFrame({
+    'Nome': nomes_alunos.iloc[X_test.index],  # Assegure-se que os índices estão alinhados
+    'Probabilidade de Evasão': probabilidades
+})
+
+# Você pode querer salvar todos ou só os evadidos:
+df_evadidos = df_testados[df_testados['Probabilidade de Evasão'] > 0.5]  # Ajuste o limiar conforme a necessidade
+print(df_evadidos)
+df_evadidos.to_csv('students_dropout_probabilities.csv', index=False)
+
+
 # Exibir os nomes dos alunos que evadiram
 print("Alunos que evadiram:")
 print(df_evadidos)
@@ -122,25 +137,6 @@ y_pred = modelo.predict(X_test)
 # Calcular a acurácia do modelo
 acuracia = accuracy_score(y_test, y_pred)
 print("Acurácia do modelo:", acuracia)
-
-df_encoded = pd.get_dummies(df.drop(['Nome', 'Status'], axis=1), drop_first=True)
-X = df_encoded  # Todas as colunas exceto 'Status'
-y = df['Status']  # A coluna 'Status'
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-modelo = DecisionTreeClassifier(max_depth=4)
-modelo.fit(X_train, y_train)
-
-# Suponha que você queira calcular a probabilidade para todo o conjunto de dados (ou ajuste conforme necessário)
-probabilidades = modelo.predict_proba(X)[:, 1]  # Probabilidade da classe positiva
-df_resultado = pd.DataFrame({
-    'name': df['Nome'],
-    'probability': probabilidades
-})
-
-# Salvar no CSV
-df_resultado.to_csv('students_dropout_probabilities.csv', index=False)
 
 # Exibir a matriz de confusão
 print("\nMatriz de Confusão:")
